@@ -9,7 +9,7 @@ function Contact() {
       <div className="Contact-Title" >
         <p className="text-big">Contact Us</p>
         <p className="center">You can Contact Us if you face any problem</p>
-        <p className="center">Click on the below options to Contact us</p>
+        <p className="center">Click on the below options to Contact Us</p>
 
         <img  className="arrowLogo" src="https://cdn-icons-gif.flaticon.com/8121/8121318.gif" alt="logo"/>
        </div>
