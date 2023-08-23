@@ -7,16 +7,10 @@ import { footContext } from "../Context";
 import { Link } from "react-router-dom";
 
 function PdtDeatils() {
-
 const data=useContext(footContext);
-const {cartItems,setCartItems}=data;
+const {cartItems,setCartItems,login}=data;
 // const updatedCartItems=[...cartItems]
-
-const addToCart=(product)=>{
-
-  setCartItems([...cartItems,product])
-  console.log('update',cartItems)
-}
+const navigate=useNavigate()
 
   const { id } = useParams();
   console.log("id=" + id);
@@ -26,6 +20,26 @@ const addToCart=(product)=>{
   if (!productid) {
     return <div>Phone not found.</div>;
   }
+
+  const addTocart = (item) => {
+    console.log(login);
+    if(login) {
+      const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
+      alert('Product is already in the cart');
+    } else {
+      if (login) {
+        const updatedCart = [...cartItems, { ...item, quantity: 1 }];
+        setCartItems(updatedCart);
+        alert(`${item.model} successfully added to the cart!`);
+      } else {
+        navigate('/Login');
+      }
+    }}else{
+      alert("please login first")
+      navigate('/Login');
+
+  }};
 
  const Order = new useNavigate();
 
@@ -54,13 +68,15 @@ const addToCart=(product)=>{
             onClick={() => productOrder(productid.id)}>
             Buy Now
           </button>
+
           <Link to={`/cart/${id}`}>
           <button
             className="buy-button"
-            onClick={()=>addToCart(productid)}>
+            onClick={()=>{addTocart(productid)}}>
             Add to Cart
           </button>
             </Link>
+
         </div>
       </div>
     </div>

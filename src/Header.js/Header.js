@@ -70,7 +70,7 @@ function Header() {
           <Nav.Link href="#Contact" onClick={ContactPage}>
             Contact
           </Nav.Link>
-        {login ? <Nav.Link href="#login" onClick={LoginPage}>
+        {login ?  <Nav.Link href="#login" onClick={LoginPage}>
           Login</Nav.Link>
            :<Nav.Link href="#Siginup" onClick={SiginPage}>SignUp</Nav.Link>
         }

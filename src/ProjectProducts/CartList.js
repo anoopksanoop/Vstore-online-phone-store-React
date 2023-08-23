@@ -17,50 +17,45 @@ const CartList = () => {
     setCartItems(updatedCartItems);
   };
   
-  const [setCart] = useState(1);
+  // const [setCart] = useState(1);
 
-  const handleIncrement = (productId) => {
-    setCart((prevCart) =>
-      prevCart.map((product) =>
-        product.id === productId
-          ? { ...product, quantity: product.quantity + 1 }
-          : product
-      )
-    );
+  // const handleIncrement = (productId) => {
+  //   setCart((prevCart) =>
+  //     prevCart.map((product) =>
+  //       product.id === productId
+  //         ? { ...product, quantity: product.quantity + 1 }
+  //         : product
+  //     )
+  //   );
+  // };
+
+  // const handleDecrement = (productId) => {
+  //   setCart((prevCart) =>
+  //     prevCart.map((product) =>
+  //       product.id === productId && product.quantity > 0
+  //         ? { ...product, quantity: product.quantity - 1 }
+  //         : product
+  //     )
+  //   );
+  // };
+  const [quantities, setQuantities] = useState(cartItems.map(() => 1));
+
+  const incrementQuantity = (index) => {
+    const newQuantities = [...quantities];
+    newQuantities[index] += 1;
+    setQuantities(newQuantities);
   };
 
-  const handleDecrement = (productId) => {
-    setCart((prevCart) =>
-      prevCart.map((product) =>
-        product.id === productId && product.quantity > 0
-          ? { ...product, quantity: product.quantity - 1 }
-          : product
-      )
-    );
+  const decrementQuantity = (index) => {
+    if (quantities[index] > 1) {
+      const newQuantities = [...quantities];
+      newQuantities[index] -= 1;
+      setQuantities(newQuantities);
+    }
   };
-
-    // const [quantity,setQuantity]=useState(1);
-  
-    // const increment = () => {
-    //   const newQty = quantity + 1;
-    //   setQuantity(newQty);
-    // };
-  
-  //  const decrement=()=>{
-  //   if(quantity>1){
-  //   setQuantity(quantity-1)
-  //  }
-  // }
-
-
-  
-  // const { id } = useParams();
-  // const Order = new useNavigate();
-  // const productOrder = (item) => {
-  //   if(item.id===data.id){
-  //    Order(`/Order/${id}`);
-  //   }
-  // }
+  const calculateprice=(price,quantity)=>{
+    return  price*quantity;
+  }
 
   
   return (
@@ -89,12 +84,12 @@ const CartList = () => {
                 <p className="lead fw-normal mb-2">{task.model}</p>
               </div>
               <div className=" class-md-3 col-lg-3 col-xl-3">
-              <Button className="btn1" onClick={() => handleDecrement(task.id)}>-</Button>
-              <span>{task.id}</span>
-              <Button className="btn1" onClick={() => handleIncrement(task.id)}>+</Button>
+              <Button className="btn1" onClick={() => decrementQuantity(index)}>-</Button>
+              <span>{quantities[index]}</span>
+              <Button className="btn1" onClick={() => incrementQuantity(index)}>+</Button>
               </div>
               <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 className="mb-0">{task.price}</h5>
+                <h5 className="mb-0">{calculateprice(task.price)}</h5>
               </div>
               <Button style={{width:'',margin:'2px', background: 'brown '}} onClick={()=>removeItemFromCart(task.id)}>Delete</Button>
               {/* <Button  style={{width:'50%',background:'cadetblue'}} onClick={productOrder}>Order</Button> */}

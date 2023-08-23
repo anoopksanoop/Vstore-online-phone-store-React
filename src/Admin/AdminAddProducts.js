@@ -5,7 +5,7 @@ import { footContext } from "../Context";
 import { useNavigate } from "react-router-dom";
 import './Admin.css'
 
-const AdminAddProducts = ({handleAddProduct}) => {
+const AdminAddProducts = () => {
   const {products,setProducts}=useContext(footContext)
 
   const [newProduct, setNewProduct] = useState({

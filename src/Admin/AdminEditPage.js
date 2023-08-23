@@ -13,7 +13,7 @@ const AdminEditPage = () => {
   const [editedProduct, setEditedProduct] = useState({});
 
   useEffect(() => {
-    const productToEdit = products.find((product) => product.id === parseInt(id));
+    const productToEdit = products.find((product) => parseInt(product.id)  === parseInt(id));
     setEditedProduct(productToEdit);
   }, [products, id]);
 
@@ -78,7 +78,7 @@ const AdminEditPage = () => {
           <Form.Label>Price</Form.Label>
           <Form.Control
             type="number"
-            value={editedProduct.price || ""}
+            value={editedProduct.price || 0}
             onChange={(e) => setEditedProduct({ ...editedProduct, price: parseInt(e.target.value) })}
             required
           />
