@@ -41,7 +41,7 @@ console.log(Search)
        </div>
      </div>
 
-  <div  style={{justifyContent:"center"}}>
+  <div className="mobile"  style={{justifyContent:"center"}}>
 
   
         <div className="product_tittle">
