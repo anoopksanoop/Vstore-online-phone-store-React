@@ -1,3 +1,9 @@
 .form-control{
 margin-right: 10px;
 }
+
+.fc{
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+}

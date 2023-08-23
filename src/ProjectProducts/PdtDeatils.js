@@ -2,20 +2,21 @@ import React, { useContext } from "react";
 import "./products.css";
 import "./pdtDeatils.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { phonesdata } from "./productData";
+//import { phonesdata } from "./productData";
 import { footContext } from "../Context";
 import { Link } from "react-router-dom";
 
 function PdtDeatils() {
 const data=useContext(footContext);
-const {cartItems,setCartItems,login}=data;
+const {cartItems,setCartItems,login,products}=data;
 // const updatedCartItems=[...cartItems]
 const navigate=useNavigate()
 
   const { id } = useParams();
   console.log("id=" + id);
-  const productid = phonesdata.find((p) => p.id === parseInt(id));
-  console.log(productid);
+  const productid = products.find((p) => parseInt(p.id)  === parseInt(id));
+ 
+  console.log("hiiiii",productid);
 
   if (!productid) {
     return <div>Phone not found.</div>;
