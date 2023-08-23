@@ -1,0 +1,30 @@
+
+.top{
+    margin-top: 80px;
+}
+
+/* AdminBar.js */
+
+.admin{
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+margin-top: 18%;
+}
+
+.list{
+  display: flex;
+  justify-content: center;  
+}
+
+.addproduct{
+margin-bottom: 10px;
+}
+
+
+/* AdminAddProduct */
+
+.form{
+    margin: 150px;
+}

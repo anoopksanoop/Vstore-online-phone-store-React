@@ -1,0 +1,43 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    
+    .horizontal-timeline .items {
+    border-top: 2px solid coral;
+    }
+    
+    .horizontal-timeline .items .items-list {
+    position: relative;
+    margin-right: 0;
+    }
+    
+    .horizontal-timeline .items .items-list:before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: burlywood;
+    top: 0;
+    margin-top: -5px;
+    }
+    
+    .horizontal-timeline .items .items-list {
+    padding-top: 15px;
+    }
+
+
+    /* CartList.js */
+    .btn1{
+        width: 50px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        background: darkcyan ;
+    }
+    span{
+        margin: 5px;
+    }
+
+    

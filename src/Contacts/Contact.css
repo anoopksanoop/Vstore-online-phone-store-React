@@ -1,0 +1,52 @@
+.contact-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+.img{
+    margin-left: 10%;
+    
+}
+.loc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    color: darkseagreen;
+}
+.Contact-Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 300px;
+}
+
+.text-big{
+    font-size: xx-large;
+    font-family: emoji;
+    font-weight: bold;
+}
+.center{
+    font-size: larger;
+    font-family: emoji;
+}
+.arrowLogo{
+    width: 8%;
+    margin-left: 50%;
+    margin-right: 50%;
+    mix-blend-mode: color-burn;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+     background: rgb(33, 37, 41);
+        color: #d7d5d5;
+        font-family: emoji;
+}

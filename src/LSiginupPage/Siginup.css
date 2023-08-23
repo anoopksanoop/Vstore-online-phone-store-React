@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to right, rgb(156 182 187), rgb(175 175 175 / 73%));
+ 
+ }
+ .sigin{
+  display: flex;
+  justify-content: center;
+
+ }
+ .control{
+  margin-bottom: 7%;
+ }
