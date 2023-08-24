@@ -55,7 +55,7 @@ console.log(Search)
 
         .map((item) => (
           <div className="d-inline-flex" key={item.id}>
-            <Card to={`/phonesdata/${item.id}`}
+            <Card 
               className="shadow p-3 mb-2 bg-body-tertiary rounded"
               style={{ width: "15rem", color: "black"}}>
 
@@ -69,7 +69,7 @@ console.log(Search)
 
               <Card.Body className="pdtDlt">
                 <Card.Title data-aos="zoom-in-right">{item.model}</Card.Title>
-                <h5 data-aos="zoom-in-left">{item.price}</h5>
+                <h5 data-aos="zoom-in-left">₹{item.price}</h5>
                 <div>
                  
                 </div>

@@ -1,6 +1,6 @@
 import React, { useContext,useRef ,useEffect} from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Siginup.css'
 import { footContext } from "../Context";
 
@@ -58,9 +58,6 @@ const SignupForm = () => {
   }
 
 
-
-  // const LoginUP=new useNavigate()
-
   return (
     <Container>
       <Row className="justify-content-center mt-5">
@@ -71,6 +68,8 @@ const SignupForm = () => {
     borderRadius:"20px",
     backgroundColor:"#212529",
     paddingBottom:"10%"}} onSubmit={handleSubmit}>
+
+      
        <h1 className="sigin">SIGN UP </h1>
             <Form.Group className="control" controlId="formName">
               <Form.Label>Name</Form.Label>
@@ -122,6 +121,9 @@ const SignupForm = () => {
             <Button variant="primary" type="submit" onClick={handleSubmit}>
               Sign Up
             </Button>
+            <div>
+              <p>if U have account : <Link to="/Login">Login</Link> </p>
+            </div>
           </Form>
         </Col>
       </Row>

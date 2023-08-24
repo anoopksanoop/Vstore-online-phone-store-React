@@ -45,7 +45,7 @@ const Cart = () => {
                   <p>{productid.decs}</p>
                 </div>
                 <div className="col-md-4 col-lg-3">
-                  <p>{productid.price}</p>
+                  <p> ₹{productid.price}</p>
                 </div>
               </div>
               <div className="row">
@@ -60,7 +60,7 @@ const Cart = () => {
 
             <div className="row my-4">
               <div className="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
-                <p className="lead fw-bold mb-0" >{productid.price}</p>
+                <p className="lead fw-bold mb-0" >₹{productid.price}</p>
                 <br/>
                 <Button href='https://netbanking.paytmbank.com/' >CONTINUE</Button>
               </div>

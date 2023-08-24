@@ -30,7 +30,7 @@ const AdminEditPage = () => {
     setProducts(updatedProducts);
 
     navigate("/admin/products");
-
+ 
     console.log("admin edit");
   };
   return (

@@ -24,6 +24,7 @@ const AdminAddProducts = () => {
     event.preventDefault();
     const updatedProducts = [...products, newProduct];
     setProducts(updatedProducts);
+    
     console.log(updatedProducts);
 
     setNewProduct({

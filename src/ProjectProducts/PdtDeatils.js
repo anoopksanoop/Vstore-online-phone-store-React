@@ -63,7 +63,7 @@ const navigate=useNavigate()
         <div className="product-info">
           <h1>{productid.model}</h1>
           <p>{productid.decs}</p>
-          <p className="product-price">{productid.price}</p>
+          <p className="product-price">₹{productid.price}</p>
           <button
             className="buy-button"
             onClick={() => productOrder(productid.id)}>

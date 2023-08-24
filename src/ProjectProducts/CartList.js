@@ -16,28 +16,7 @@ const CartList = () => {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCartItems);
   };
-  
-  // const [setCart] = useState(1);
-
-  // const handleIncrement = (productId) => {
-  //   setCart((prevCart) =>
-  //     prevCart.map((product) =>
-  //       product.id === productId
-  //         ? { ...product, quantity: product.quantity + 1 }
-  //         : product
-  //     )
-  //   );
-  // };
-
-  // const handleDecrement = (productId) => {
-  //   setCart((prevCart) =>
-  //     prevCart.map((product) =>
-  //       product.id === productId && product.quantity > 0
-  //         ? { ...product, quantity: product.quantity - 1 }
-  //         : product
-  //     )
-  //   );
-  // };
+ 
   const [quantities, setQuantities] = useState(cartItems.map(() => 1));
 
   const incrementQuantity = (index) => {
@@ -89,7 +68,7 @@ const CartList = () => {
               <Button className="btn1" onClick={() => incrementQuantity(index)}>+</Button>
               </div>
               <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 className="mb-0">{calculateprice(task.price)}</h5>
+                <h5 className="mb-0">₹{calculateprice(task.price, quantities[index])}</h5>
               </div>
               <Button style={{width:'',margin:'2px', background: 'brown '}} onClick={()=>removeItemFromCart(task.id)}>Delete</Button>
               {/* <Button  style={{width:'50%',background:'cadetblue'}} onClick={productOrder}>Order</Button> */}

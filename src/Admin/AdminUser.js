@@ -7,10 +7,8 @@ import './AdminUser.css'
 const AdminUser = () => {
  
   const {password}= useContext(footContext)
- // console.log("users",data)
   console.log(password);
- // console.log(password[2])
-  //console.log(password,"yfu");
+ 
   
   return (
     <div className="user">
