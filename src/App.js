@@ -14,6 +14,7 @@ import Siginup from "./LSiginupPage/Siginup";
 import Header from "./Header.js/Header";
 import Product from "./ProjectProducts/Product";
 import Contact from "./Contacts/Contact";
+import Footer from "./Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ForgetPass from "./ForgetPassword/ForgetPass";
 import PdtDeatils from "./ProjectProducts/PdtDeatils";
@@ -67,6 +68,7 @@ function App() {
           <Route path="/Admin/Login" element={<AdminLogin/>}/>
           <Route path="/Admin/Users" element={<AdminUser/>}/>
         </Routes>
+       <Footer/>
         </footContext.Provider>
       </BrowserRouter>
 

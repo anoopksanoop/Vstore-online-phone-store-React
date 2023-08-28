@@ -42,9 +42,6 @@ function Contact() {
           \Back to Home
         </Link>
       </div>
-      <footer className="footer">
-        Copyright@All rights are reserved
-      </footer>
     </div>
   );
 }
