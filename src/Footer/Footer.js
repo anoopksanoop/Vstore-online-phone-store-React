@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -71,16 +72,16 @@ function Footer() {
                 style={{width:"60px", backgroundColor: '#7c4dff', height:" 2px"}}
                 />
             <p>
-              <span href="#!" className="text-white">Android</span>
+            <Link style={{textDecoration:"none",color:"white"}} to="/Oppo">Oppo</Link>
             </p>
             <p>
-              <span href="#!" className="text-white">Iphone</span>
+            <Link style={{textDecoration:"none",color:"white"}}  to="/Redmi">Redmi</Link>
             </p>
             <p>
-              <span href="#!" className="text-white">Linux</span>
+            <Link style={{textDecoration:"none",color:"white"}}  to="/Samsung">Samsung</Link>
             </p>
             <p>
-              <span href="#!" className="text-white">Windows</span>
+            <Link style={{textDecoration:"none",color:"white"}}   to="/Vivo">Vivo</Link>
             </p>
           </div>
          

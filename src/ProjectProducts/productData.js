@@ -69,7 +69,8 @@ export const phonesdata=[
         decs:"VIVO MOBILE Y100 5G 8GB 128GB (Y1005G8128GB)",
         price:23999,
         image:"https://www.sathya.store/img/product/9Fz54FEDHaZ3q3Ox.jpg",
-        Qty:1,   
+        Qty:1, 
+        
     },
 
     {

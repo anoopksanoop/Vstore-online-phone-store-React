@@ -23,6 +23,11 @@ import CartList from "./ProjectProducts/CartList";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { phonesdata } from "./ProjectProducts/productData";
+
+import Oppo from "./FilterFooter/Oppo";
+import Redmi from "./FilterFooter/Redmi";
+import Samsung from "./FilterFooter/Samsung";
+import Vivo from "./FilterFooter/Vivo";
 AOS.init();
 
 function App() {
@@ -67,6 +72,13 @@ function App() {
           <Route path='/admin/addproduct' element ={<AdminAddProducts handleAddProduct={handleAddProduct} />}/>
           <Route path="/Admin/Login" element={<AdminLogin/>}/>
           <Route path="/Admin/Users" element={<AdminUser/>}/>
+
+          <Route path="/Oppo" element={<Oppo/>}/>
+          <Route path="/Redmi" element={<Redmi/>}/>
+          <Route path="/Samsung" element={<Samsung/>}/>
+          <Route path="/Vivo" element={<Vivo/>}/>
+
+
         </Routes>
        <Footer/>
         </footContext.Provider>
