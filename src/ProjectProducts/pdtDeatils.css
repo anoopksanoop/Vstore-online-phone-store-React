@@ -8,6 +8,7 @@
 }
 .product-image{
     filter: drop-shadow(6px 10px 8px black);
+    display: flex;
     mix-blend-mode: multiply;
     background-color: white;
     

@@ -29,7 +29,7 @@ products.filter((product) => product.model.includes("OPPO"));
 
   return (
 
-    <div>
+    <div style={{marginTop:"130px"}}>
     {  filterProducts.map((item) => (
           <div className="d-inline-flex" key={item.id}>
             <Card 

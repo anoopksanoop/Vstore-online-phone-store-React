@@ -24,7 +24,7 @@ const Samsung = () => {
         
         }
   return (
-    <div>
+    <div style={{marginTop:"130px"}}>
          <div>
     {  filterProducts.map((item) => (
           <div className="d-inline-flex" key={item.id}>

@@ -16,7 +16,7 @@ const navigate=useNavigate()
   console.log("id=" + id);
   const productid = products.find((p) => parseInt(p.id)  === parseInt(id));
  
-  console.log("hiiiii",productid);
+  console.log("hiiii",productid);
 
   if (!productid) {
     return <div>Phone not found.</div>;
@@ -45,7 +45,13 @@ const navigate=useNavigate()
  const Order = new useNavigate();
 
  const productOrder = () => {
+  if(login){
     Order(`/Order/${id}`);
+  }else{
+    alert("please login first")
+    navigate('/Login')
+  }
+  
   }; 
 
   

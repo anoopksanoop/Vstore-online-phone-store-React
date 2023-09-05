@@ -38,6 +38,7 @@ const CartList = () => {
 
   
   return (
+    
     <section className="h-100" style={{marginTop:'3rem'}}>
     <div className="container h-100 py-5">
      <div className="row d-flex justify-content-center align-items-center h-100">

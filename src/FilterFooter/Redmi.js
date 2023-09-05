@@ -24,7 +24,7 @@ products.filter((product) => product.model.includes("REDMI"));
     
     }
   return (
-    <div>
+    <div style={{marginTop:"130px"}}>
     {  filterProducts.map((item) => (
           <div className="d-inline-flex" key={item.id}>
             <Card 

@@ -57,9 +57,9 @@ function Footer() {
                 style={{width:" 60px", backgroundColor:'#7c4dff',height:" 2px"}}
                 />
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+             React js is a Open Scource Javascript library
+           commonly using  user interface in WebApplication.React js in Buld by FaceBook.
+              But This platform Build by me(Anoop ks)
             </p>
           </div>
 

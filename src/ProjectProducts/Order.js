@@ -19,7 +19,7 @@ const Cart = () => {
 
   return (
     <div>
-        <section className="h-100 h-custom" style={{marginTop:"3rem"}}>
+        <section className="h-100 h-custom" style={{marginTop:"3rem",marginBottom:"500px"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-lg-8 col-xl-6">
