@@ -38,7 +38,7 @@ function Contact() {
         </div>
       </div>
       <div>
-        <Link style={{ color: "gray", marginLeft: "20%" }} to="/products">
+        <Link style={{ color: "gray", marginLeft: "20%" }} to="/">
           \Back to Home
         </Link>
       </div>

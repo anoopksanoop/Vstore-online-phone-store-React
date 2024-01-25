@@ -11,17 +11,17 @@ function Header() {
   const Home = new useNavigate();
   const Sigin = new useNavigate();
   const Login = new useNavigate();
-  // const LogOut = new useNavigate();
   const Contact = new useNavigate();
   const Cart = new useNavigate();
-  // const Admin = new useNavigate();
 
   const data=useContext(footContext)
-  const {cartItems,login,setLogin}=data;
-  // const [uName]=password
+  const {cartItems,setLogin}=data;
+
 
   const logOut=()=>{
     setLogin(false)
+    sessionStorage.removeItem("user");
+    // sessionStorage.removeItem("currentuser");
   }
 
   const HomePage = () => {
@@ -67,16 +67,22 @@ function Header() {
           <Nav.Link  onClick={HomePage}>
             Home
           </Nav.Link>
-          <Nav.Link href="#Contact" onClick={ContactPage}>
+          <Nav.Link href="" onClick={ContactPage}>
             Contact
           </Nav.Link>
-        {login ?  <Nav.Link href="#login" onClick={LoginPage}>
-          Login</Nav.Link>
-           :<Nav.Link href="#Siginup" onClick={SiginPage}>SignUp</Nav.Link>
-        }
-        {login ?  <Nav.Link href="#login" onClick={logOut}>
+          {sessionStorage.user  ? 
+        <Nav.Link href="" onClick={logOut}>
           LogOut</Nav.Link>
-          :null}
+        
+           :
+           <Nav.Link href="" onClick={SiginPage}>SignUp</Nav.Link>
+         
+         
+        }
+            {sessionStorage.user ? "" :
+          <Nav.Link href="" onClick={LoginPage}>
+          Login</Nav.Link>
+}
 
            {/* <Nav.Link href="#Siginup" onClick={SiginPage}>SignUp</Nav.Link> */}
           <Link className="" to='/Admin/Login'>

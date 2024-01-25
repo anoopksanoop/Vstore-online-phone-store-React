@@ -13,6 +13,7 @@ const AdminUser = () => {
   return (
     <div className="user">
       <h2>Users</h2>
+      {/* mapinte akath parameter pass chyunn */}
       {password.map((user) => {
         console.log("hello", user.Name);
         return (

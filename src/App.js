@@ -7,7 +7,7 @@ import AdminUser from "./Admin/AdminUser";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { useState } from "react";
+import { useState} from "react";
 import { footContext } from "./Context";
 import Login from "./Loginpage/Login";
 import Siginup from "./LSiginupPage/Siginup";
@@ -46,6 +46,11 @@ function App() {
     password,
     setPassword
   }
+  // useEffect(() => {
+  //   sessionStorage.setItem('login', JSON.stringify(login));
+  //   sessionStorage.setItem('password', JSON.stringify(password));
+  //   sessionStorage.setItem('signupInfo', JSON.stringify(products));
+  // }, [login, password, products]);
   
   const handleAddProduct=(newProduct) =>{
     setProducts([...products,newProduct])

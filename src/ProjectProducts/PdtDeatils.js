@@ -5,12 +5,15 @@ import { useNavigate, useParams } from "react-router-dom";
 //import { phonesdata } from "./productData";
 import { footContext } from "../Context";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../Redux/UserSlice";
 
 function PdtDeatils() {
 const data=useContext(footContext);
 const {cartItems,setCartItems,login,products}=data;
 // const updatedCartItems=[...cartItems]
 const navigate=useNavigate()
+const dispatch=useDispatch()
 
   const { id } = useParams();
   console.log("id=" + id);
@@ -24,15 +27,21 @@ const navigate=useNavigate()
 
   const addTocart = (item) => {
     console.log(login);
-    if(login) {
+    if(sessionStorage.user ) {
       const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
       alert('Product is already in the cart');
     } else {
-      if (login) {
+      if (sessionStorage.user ) {
         const updatedCart = [...cartItems, { ...item, quantity: 1 }];
         setCartItems(updatedCart);
         alert(`${item.model} successfully added to the cart!`);
+        dispatch(
+          setUser({
+            cart:item
+          })
+        )
+      
       } else {
         navigate('/Login');
       }
@@ -41,6 +50,7 @@ const navigate=useNavigate()
       navigate('/Login');
 
   }};
+
 
  const Order = new useNavigate();
 

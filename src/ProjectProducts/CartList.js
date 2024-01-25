@@ -3,14 +3,17 @@ import { footContext } from "../Context";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import './Order.css'
-
+import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/UserSlice";
 
 const CartList = () => {
   const data=useContext(footContext)
   const { cartItems, setCartItems} = data;
 
   console.log("hyy",cartItems)
-
+  const  user= useSelector(selectUser);
+console.log("sdff",user
+)
    
   const removeItemFromCart = (itemId) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);

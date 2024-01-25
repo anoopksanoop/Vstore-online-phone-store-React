@@ -10,9 +10,12 @@ const SignupForm = () => {
   const inputref=useRef(null)
 
   const { password, setPassword } = data;
+
   useEffect(() => {
     console.log(password);
   }, [password])
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const Cart = []
@@ -44,6 +47,7 @@ const SignupForm = () => {
     alert("Confirm Password is required");
     return;
   }
+  
   
   if (Password !== confirmPassword ) {
     // Display an error or prevent signup if passwords don't match

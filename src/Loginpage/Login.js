@@ -4,32 +4,49 @@ import './Login.css'
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import { footContext } from "../Context";
-
+import { useDispatch } from "react-redux";
+import { setUser } from "../Redux/UserSlice";
 
 const Login = () => {
   const data = useContext(footContext)
   const nav=useNavigate()
 
+  const dispatch=useDispatch()
+
   const inputRef = useRef()
   const { password, setLogin } = data
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const email = inputRef.current.email.value
     const Password = inputRef.current.password.value
     
-    const [newdata] = password
-
-    if (newdata.Email === email && newdata.Password === Password) {
-      setLogin(true)
-      nav('/');
+    if (password.length > 0) {
+      const [newdata] = password;
+  
+      if (newdata && newdata.Email === email && newdata.Password === Password) {
+        setLogin(true);
+        dispatch(
+          setUser({
+            email:email,
+            Password: Password,
+            setLogin: true,
+          })
+        );
+        nav('/');
+      } else if (newdata && newdata.Email === "") {
+        alert('Email none');
+      } else {
+        alert('User Not Found !!!');
+      }
     } else {
       alert('User Not Found !!!');
     }
-
   };
 
-
+console.log(password)
   return (
     <Container >
       <Row  className="justify-content-center mt-5">
